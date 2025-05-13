@@ -1,0 +1,144 @@
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333;
+    --cor-header: #007bff;
+    --cor-header-texto: white;
+    --cor-contador: #28a745;
+    --cor-botao-incrementar: #28a745;
+    --cor-botao-incrementar-hover: #1e7e34;
+    --cor-botao-decrementar: #dc3545;
+    --cor-botao-decrementar-hover: #c82333;
+    --cor-botao-resetar: #ffc107;
+    --cor-botao-resetar-hover: #e0a800;
+    --cor-erro-fundo: #007bff;
+    --cor-erro-texto: #FFFFFF;
+    --cor-footer-texto: #777;
+    --cor-bordo: #ccc;
+}
+
+*{
+    margin: 0;
+}
+
+header h1{
+    color: var(--cor-header-texto);
+    font-size: 3em;
+    background-color: var(--cor-header);
+    display: flex;
+    justify-content: center;
+    padding: 1.5em 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--cor-bordo);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+section{
+    background-color: var(--cor-fundo);
+    border-radius: .7em;
+    min-width: 24em;
+    min-height: 14em;
+    margin: 3em;
+    padding: 3em;
+}
+
+section p{
+    font-size: 3em;
+    color: var(--cor-botao-incrementar);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+div.botoes-controle{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+button{
+    border-radius: .4em;
+    border:none;
+    cursor: pointer;
+    padding: .8em;
+    font-size: 1em;
+}
+
+button#incrementar-btn{
+    color: var(--cor-header-texto);
+    background-color: var(--cor-botao-incrementar);
+}
+
+button#incrementar-btn:hover{
+    background-color: var(--cor-botao-incrementar-hover);
+}
+
+button#decrementar-btn{
+    color: var(--cor-erro-texto);
+    background-color: var(--cor-botao-decrementar);
+}
+
+
+button#decrementar-btn:hover{
+    background-color: var(--cor-botao-decrementar-hover);
+}
+
+button#resetar-btn{
+    color: var(--cor-texto);
+    background-color: var(--cor-botao-resetar);
+}
+
+button#resetar-btn:hover{
+    background-color: var(--cor-botao-resetar-hover);
+}
+
+div#erro-mensagem{
+    background-color: var(--cor-header);
+    color: var(--cor-header-texto);
+    padding: 1.5em 0;
+    margin: .2em;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    color: var(--cor-footer-texto);
+}
+
+
+@media (max-width: 30rem) { /* 480px */
+
+    section{
+        min-width: 18em;
+        min-height: 8em;
+        margin: 1.5em;
+        padding: 1.5em;
+    }
+    .botoes-controle {        
+        gap: 1em;
+        margin-bottom: 2em;
+    }
+
+    button{
+        border-radius: .4em;
+        padding: .4em;
+        font-size: .9em;
+    }
+
+    header h1{
+        font-size: 2em;
+        padding: 1em 0;
+    }
+}
